@@ -1,5 +1,6 @@
 import React from "react";
 import './Home.css'
+import About from '../About/About'
 import Intro from "./Intro";
 import { NavLink } from "react-router-dom";
 import img from "../../assets/girl.png"
@@ -19,7 +20,7 @@ const Home = () => {
             <Intro />
           </h2>
           <br />
-            <p className="lead mb-5 text-white text-justify text-lg-left">
+            <p className="lead lh-base mb-5 text-white text-justify text-lg-left">
               Build websites and ensure they perform reliably and efficiently.
               Designing user interfaces and navigation menus. Writing and
               reviewing code for sites, typically HTML, XML, or JavaScript.
@@ -61,7 +62,7 @@ const Home = () => {
           {/* // Image end */}
         </div>
       </section>
-     
+     <About />
     </div>
   );
 };
