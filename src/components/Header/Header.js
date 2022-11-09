@@ -1,11 +1,12 @@
 import React from "react";
+import './Header.css'
 
 import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div className="container-fluid ">
+      <nav className="navbar navbar-expand-lg sticky-top bg-dark navbar-dark ">
+        <div className="container ">
           <NavLink className="navbar-brand" to="/">
             Portfolio
           </NavLink>

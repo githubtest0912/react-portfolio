@@ -1,83 +1,69 @@
-import React from 'react'
+import React from "react";
+import './Home.css'
+import Intro from "./Intro";
+import { NavLink } from "react-router-dom";
+import img from "../../assets/girl.png"
 
-import slide1 from '../../assets/slide1.jpg';
-import slide2 from '../../assets/slide2.jpg';
-import slide3 from '../../assets/slide3.jpg';
 
 const Home = () => {
   return (
-    <div>
-      <div
-        id="carouselExampleIndicators"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div className="carousel-inner" style={{ height: "90vh" }}>
-          <div className="carousel-item active">
+    <div className='bg-dark'>
+      <section className="container  py-4 ">
+        <div className="row">
+          <div className="col-md-5 mt-5">
+            <span className="display-5 mb-4 text-white">Hey! I am</span>
+            <h1 className="display-4 mb-4 text-info ">
+             Selvarani
+            </h1>
+            <h2 className="display-5 mb-4 text-warning">
+            <Intro />
+          </h2>
+          <br />
+            <p className="lead mb-5 text-white text-justify text-lg-left">
+              Build websites and ensure they perform reliably and efficiently.
+              Designing user interfaces and navigation menus. Writing and
+              reviewing code for sites, typically HTML, XML, or JavaScript.
+              Integrating multimedia content onto a site. Testing web
+              applications. Troubleshooting problems with performance or user
+              experience Collaborating with designers, and developers
+            </p>
+            <NavLink
+              className="btn btn-outline-warning me-4 mb-5"
+              to="/contact"
+              role="button"
+            >
+              Hire Me
+            </NavLink>
+            <NavLink className="btn btn-warning mb-5" to="/about" role="button">
+             Download CV
+            </NavLink>
+            {/* // animation */}
+
+          <div className="hero-shape custom-animation">
             <img
-              src={slide1}
-              className="d-block w-100"
-              alt="slide1"
+              src="https://www.svgrepo.com/show/425253/balls-footbal.svg"
+              alt="circle-animation"
+              height="50"
+              width="50"
+              style={{ opacity: "0.5" }}
             />
           </div>
-          <div className="carousel-item">
-            <img src={slide2} className="d-block w-100" alt={slide2} />
+          
           </div>
-          <div className="carousel-item">
-            <img src={slide3} className="d-block w-100" alt={slide3} />
+
+      
+          {/* // image */}
+
+          <div className="col-md-7 d-flex justify-content-center align-items-center">
+            <img src={img} alt="" height="300px" width="300px" />
           </div>
+
+          {/* // Image end */}
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+      </section>
+     
     </div>
   );
 };
 
-
-
-export default Home
+export default Home;
