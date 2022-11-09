@@ -1,17 +1,17 @@
 import React from "react";
 import "./About.css";
-import Details from './Details';
+import Details from "./Details";
 import img from "../../assets/girl.png";
 const About = () => {
   return (
-    <div className='bg-light'>
+    <div className="bg-light">
       <section className="about">
         <div className="container">
           <div className="row">
             {/* // heading About */}
-            <div className="col-12 text-center py-4">
-              <h1>About</h1>
-              <hr />
+            <div className="col-12 text-center py-4 ">
+              <h1>About Me</h1>
+              <hr  />
             </div>
           </div>
         </div>
@@ -31,16 +31,16 @@ const About = () => {
                 and modular code. I am also keen of maintaining beautiful,
                 interactive, minimalistic, responsive and user-friendly UI.
               </p>
-               <ul className="about-details py-3">
-              {Details.map((item, index) => {
-                return (
-                  <li className="about-details-list" key={index}>
-                    <span className="about-title">{item.title} </span>
-                    <span className="about-value">{item.value} </span>
-                  </li>
-                );
-              })}
-            </ul>
+              <ul className="about-details py-3">
+                {Details.map((item, index) => {
+                  return (
+                    <li className="about-details-list" key={index}>
+                      <span className="about-title">{item.title} </span>
+                      <span className="about-value">{item.value} </span>
+                    </li>
+                  );
+                })}
+              </ul>
 
               {/* // progress */}
               <div className="progress my-4" style={{ height: "30px" }}>
@@ -98,7 +98,6 @@ const About = () => {
                   aria-valuemin="0"
                   aria-valuemax="100"
                 >
-                
                   React
                 </div>
                 <span className="pro">50%</span>
